@@ -30,14 +30,14 @@ console.group("Triangulos");
 //console.log("La altura del triángulo es de: " + alturaTriangulo + "cm");
 
 function perimetroTriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base;
+    return Number(lado1) + Number(lado2) + Number(base);
 }
 //console.log("El perímetro del triángulo mide: " + perimetroTriangulo + "cm");
 
 function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
-console.log("El área del triángulo mide: " + areaTriangulo + "cm^2");
+//console.log("El área del triángulo mide: " + areaTriangulo + "cm^2");
 console.groupEnd();
 
 //Código del círculo
@@ -55,7 +55,8 @@ function diametroCirculo(radio){
 
 //PI
 const PI = Math.PI;
-console.log("PI es: " + PI + "cm");
+//
+//console.log("PI es: " + PI + "cm");
 
 //Circunferencia
 function perimetroCirculo(radio){
@@ -78,24 +79,24 @@ console.groupEnd();
 
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("inputCuadrado");
-    const value = input.value;
+    const lado = input.value;
 
-    const perimetro = perimetroCuadrado(value);
+    const perimetro = perimetroCuadrado(lado);
     alert(perimetro);
 }
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("inputCuadrado");
-    const value = input.value;
+    const lado = input.value;
 
-    const area = areaCuadrado(value);
+    const area = areaCuadrado(lado);
     alert(area);
 }
 
 
  // Funciones para el triángulo
 
- function calcularPerimetroCuadrado(){
+ function calcularPerimetroTriangulo(){
     const input1 = document.getElementById("inputBaseTriangulo");
     const input2 = document.getElementById("inputLadoTriangulo1");
     const input3 = document.getElementById("inputLadoTriangulo2");
@@ -108,7 +109,7 @@ function calcularAreaCuadrado(){
     alert(perimetro);
 }
 
-function calcularAreaCuadrado(){
+function calcularAreaTriangulo(){
     const input1 = document.getElementById("inputBaseTriangulo");
     const input2 = document.getElementById("inputAlturaTriangulo");
 
@@ -121,18 +122,18 @@ function calcularAreaCuadrado(){
 
  // Funciones para el círculo
 
- function calcularPerimetroCuadrado(){
-    const input = document.getElementById("inputCuadrado");
-    const value = input.value;
+ function calcularPerimetroCirculo(){
+    const input = document.getElementById("inputCirculo");
+    const radio = input.value;
 
-    const perimetro = perimetroCuadrado(value);
+    const perimetro = perimetroCirculo(radio);
     alert(perimetro);
 }
 
-function calcularAreaCuadrado(){
-    const input = document.getElementById("inputCuadrado");
-    const value = input.value;
+function calcularAreaCirculo(){
+    const input = document.getElementById("inputCirculo");
+    const radio = input.value;
 
-    const area = areaCuadrado(value);
+    const area = areaCirculo(radio);
     alert(area);
 }
